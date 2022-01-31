@@ -17,10 +17,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Quiero Pizza", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav">@*botones de navegacion*@
+                    <li>
+                        @Html.ActionLink("Inicio", "Index", "Home")@*Primero nombre del link, luego nombre de la accion, 
+                                                             por ultimo nombre del controlador*@
+                    </li>
+                    <li>
+                        @Html.ActionLink("Productos", "Index", "Productos")
+                    </li>
                 </ul>
             </div>
         </div>
@@ -29,9 +36,11 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+
+        <footer>@*ESTO ES PARA EL PIE DE LA PAGINA*@
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application | ANGEL DESING</p>
         </footer>
+
     </div>
 
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
